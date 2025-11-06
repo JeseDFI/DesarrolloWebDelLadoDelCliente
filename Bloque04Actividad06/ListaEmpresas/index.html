@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empresas</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link"> Volver al inicio</a>
+        <h2>Registro de Empresas</h2>
+        
+        <form id="companyForm">
+            <div class="form-group">
+                <label for="folio">Folio:</label>
+                <input type="text" id="folio" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="domicilio">Domicilio:</label>
+                <input type="text" id="domicilio" required>
+            </div>
+            <button type="submit" class="btn">Agregar Empresa</button>
+        </form>
+
+        <h3>Empresas Registradas</h3>
+        <ul id="companyList">
+        
+        </ul>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
