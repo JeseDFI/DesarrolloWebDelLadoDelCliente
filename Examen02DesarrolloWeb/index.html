@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tienda de Libros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Registro de Cuenta</h1>
+  
+    <div id="registrationForm">
+    <b>Nombre:</b><br>
+    <input type="text" id="name"><br>
+    
+    <b>Apellidos:</b><br>
+    <input type="text" id="lastName"><br>
+    
+    <b>Teléfono (xxx xx xx xx):</b><br>
+    <input type="tel" id="phone" placeholder="xxx xx xx xx"><br>
+    
+    <b>Password (mínimo 8 caracteres):</b><br>
+    <input type="password" id="password"><br>
+    
+    <b>Áreas de interés:</b><br>
+    <input type="checkbox" name="interest" value="programming"> Programación
+    <input type="checkbox" name="interest" value="design"> Diseño
+    <input type="checkbox" name="interest" value="science"> Ciencias
+    <br>
+    
+    <b>Fecha de nacimiento:</b><br>
+    <input type="date" id="birthDate"><br>
+    
+    <input type="checkbox" id="terms"> <b>Acepto los térmnos de protección de datos.</b>
+    <br><br>
+    
+    <button id="addButton">Agregar</button>
+    </div>
+
+    <hr>
+
+    <h2>Calculadora de Pedido</h2>
+    <div>
+    <b>Nombre del libro:</b><br>
+    <input type="text" id="bookName"><br>
+    
+    <b>Precio:</b><br>
+    <input type="text" id="price"><br>
+    
+    <b>IVA:</b><br>
+    <select id="vatOption">
+        <option value="10">IVA Reducido (10%)</option>
+        <option value="21">IVA Normal (21%)</option>
+    </select><br>
+    
+    <b>Resultado:</b><br>
+    <input type="text" id="result" readonly><br><br>
+    
+    <button id="calculateButton">Calcular</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
