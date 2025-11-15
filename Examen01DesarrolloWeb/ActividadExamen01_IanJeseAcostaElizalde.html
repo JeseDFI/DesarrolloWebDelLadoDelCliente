@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tecnologías — Estructura semántica HTML5</title>
+        <style>
+            :root{
+                --accent:#0b7285;
+                --muted:#6c757d;
+                --bg:#f7f9fb;
+                --card:#ffffff;
+            }
+
+            *{
+                box-sizing:border-box
+            }
+
+            body{
+                font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+                line-height:1.5;
+                margin:0;
+                background:var(--bg);
+                color:#111;
+            }
+
+            .container{
+                max-width:1000px;
+                margin:24px auto;
+                padding:16px;
+            }
+
+            header.site-header{
+                background:linear-gradient(90deg,#fff 0%,#f4fcff 100%);
+                border-radius:12px;
+                padding:18px 20px;
+                display:flex;
+                align-items:center;
+                gap:16px;
+            }
+
+            .logo{
+                width:56px;
+                height:56px;
+                background:var(--accent);
+                color:#fff;
+                border-radius:10px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                font-weight:700;
+            }
+
+            nav.primary{
+                margin-left:auto;
+            }
+
+            nav.primary ul{
+                display:flex;
+                gap:12px;
+                list-style:none;
+                padding:0;
+                margin:0;
+            }
+
+            nav.primary a{
+                color:var(--accent);
+                text-decoration:none;
+                font-weight:600;
+            }
+
+            main{
+                display:grid;
+                grid-template-columns:1fr 300px;gap:20px;
+                margin-top:18px;
+            }
+
+            article.card, aside.card{
+                background:var(--card);
+                padding:18px;
+                border-radius:12px;
+                box-shadow:0 6px 18px rgba(16,24,40,0.06);
+            }
+
+            h1,h2{
+                margin:0 0 12px 0;
+            }
+
+            section.topic{
+                margin-bottom:14px;
+            }
+
+            .meta{
+                color:var(--muted);
+                font-size:0.95rem;
+                margin-bottom:12px;
+            }
+
+            figure{
+                margin:0 0 12px 0;
+            }
+
+            figcaption{
+                font-size:0.9rem;
+                color:var(--muted);
+            }
+
+            footer.site-footer{
+                margin-top:18px;
+                padding:14px;
+                border-radius:12px;
+                background:var(--card);
+                text-align:center;
+                color:var(--muted);
+            }
+
+            .toc ul{
+                padding-left:16px;
+            }
+
+            @media (max-width:880px){
+                main{
+                    grid-template-columns:1fr;
+                }
+                
+                .logo{
+                    width:48px;
+                    height:48px;
+                }
+            }
+
+        </style>
+</head>
+<body>
+    <div class="container">
+
+        <header class="site-header" role="banner">
+            <div class="logo" aria-hidden="true">T</div>
+            <div>
+                <h1>Guía rápida: Tecnologías web</h1>
+                <p class="meta">Resumen de conceptos y recursos — usando elementos semánticos de HTML5</p>
+            </div>
+
+            <nav class="primary" role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#introduccion">Inicio</a></li>
+                    <li><a href="#redes">Redes</a></li>
+                    <li><a href="#hospedaje">Hospedaje</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <main id="contenido" tabindex="-1">
+
+        <article class="card" aria-labelledby="art-title">
+            <h2 id="art-title">Tecnologías: conceptos clave</h2>
+            <p class="meta">Una visión técnica y organizada de tecnologías relacionadas con la web y redes.</p>
+
+            <section id="introduccion" class="topic" aria-labelledby="sec-intro">
+                <h3 id="sec-intro">Introducción</h3>
+                <p>Las <strong>tecnologías</strong> que sustentan la web incluyen protocolos de comunicación (como <abbr title="Transmission Control Protocol / Internet Protocol">TCP/IP</abbr>), servicios de hospedaje (hosting), protocolos de transferencia de archivos (FTP), y tecnologías de desarrollo (HTML, CSS, JavaScript).</p>
+            </section>
+
+            <section id="redes" class="topic" aria-labelledby="sec-redes">
+                <h3 id="sec-redes">Redes y protocolos</h3>
+                <p>Las redes permiten la interconexión de dispositivos. Protocolos como <code>IP</code> proporcionan direccionamiento, mientras que <code>TCP</code> asegura la entrega fiable de paquetes. ARPANET (1969) fue el antecedente histórico de Internet.</p>
+            </section>
+
+            <section id="hospedaje" class="topic" aria-labelledby="sec-hospedaje">
+                <h3 id="sec-hospedaje">Hospedaje web</h3>
+                <p>El hospedaje web es un servicio de infraestructura para almacenar y servir sitios mediante servidores conectados a Internet. Tipos comunes: compartido, VPS, dedicado y en la nube.</p>
+
+                <figure>
+                    <img src="https://img.freepik.com/fotos-premium/retrato-dinamico-angulo-joven-profesional-que-opera-habilmente-tableta-digital-cerca-gabinete-servidor-tareas-supercomputacion_875722-1695.jpg" alt="Ilustración de servidor web" style="max-width:100%;height:auto;border-radius:8px;">
+                    <figcaption>Figura: representación esquemática de un servidor de hospedaje y usuarios accediendo desde Internet.</figcaption>
+                </figure>
+            </section>
+
+            <section id="ftp" class="topic" aria-labelledby="sec-ftp">
+                <h3 id="sec-ftp">FTP y transferencia de archivos</h3>
+                <p>FTP (File Transfer Protocol) es un protocolo para transferir archivos entre cliente y servidor. Se utiliza habitualmente para publicar archivos en servidores web o sincronizar contenido.</p>
+            </section>
+
+            <section id="desarrollo" class="topic" aria-labelledby="sec-dev">
+                <h3 id="sec-dev">Desarrollo web</h3>
+                <p>HTML5 ofrece elementos semánticos (como los que se usan en esta página) que mejoran la accesibilidad y el SEO. CSS y JavaScript se encargan del estilo y la interactividad, respectivamente.</p>
+            </section>
+
+        </article>
+
+        <aside class="card" aria-labelledby="aside-title">
+            <h3 id="aside-title">Índice y recursos</h3>
+            <nav class="toc" aria-label="Índice de secciones">
+                <ul>
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#redes">Redes y protocolos</a></li>
+                    <li><a href="#hospedaje">Hospedaje web</a></li>
+                    <li><a href="#ftp">FTP</a></li>
+                    <li><a href="#desarrollo">Desarrollo web</a></li>
+                </ul>
+            </nav>
+
+            <hr>
+            <h4>Enlaces útiles</h4>
+            <ul>
+                <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+                <li><a href="https://www.iana.org/" target="_blank" rel="noopener noreferrer">IANA (puertos y protocolos)</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <p>© 2025 — Guía de tecnologías. Creada con elementos semánticos de HTML5.</p>
+        <p style="margin:6px 0 0 0; font-size:0.95rem">Contacto: <a href="mailto:info@ejemplo.com">info@ejemplo.com</a></p>
+    </footer>
+
+</div>
+</body>
+</html>

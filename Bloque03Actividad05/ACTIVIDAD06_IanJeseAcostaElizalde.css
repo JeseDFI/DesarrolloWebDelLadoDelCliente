@@ -1,0 +1,49 @@
+/* Selector de Atributo: ¿Cómo seleccionarías todos los enlaces (<a>) que tienen la clase nav-link y están dentro de un elemento <nav> con la clase main-nav? */
+nav.main-nav a.nav-link {
+    color: red;
+}
+
+/* Selector de Pseudo-clase: ¿Cómo aplicarías un estilo diferente al enlace que tiene la clase active dentro de la lista de navegación? */
+nav.main-nav a.active:hover {
+    text-decoration: none;
+}
+
+/* Selector de Descendencia: ¿Cómo seleccionarías todos los elementos <p> que están dentro de un <article> con la clase article-item? */
+article.article-item p {
+    border: 1px solid chocolate;
+}
+
+/* Selector de Hijo Directo: ¿Cómo seleccionarías solo los elementos <li> que son hijos directos de un <ul> dentro del footer? */
+footer ul > li {
+    color: yellow;
+}
+
+/* Selector de Hermano Adyacente: ¿Cómo seleccionarías el primer <article> que sigue inmediatamente a un <h2> con la clase section-title? */
+.content-section h2 + article {
+    border: 3px solid red;
+}
+
+/* Selector de Pseudo-elemento: ¿Cómo agregarías un símbolo de flecha (→) después de cada enlace con la clase read-more? */
+.article-item a.read-more::after {
+    content: "→";
+}
+
+/* Selector de Atributo con Valor Específico: ¿Cómo seleccionarías todos los elementos <a> que tienen un atributo href que comienza con #? */
+body a[href^="#"] {
+    background-color: lime;
+}
+
+/* Selector de Negación: ¿Cómo seleccionarías todos los elementos <article> que no tienen la clase featured? */
+.article-item:not(.featured) {
+    background-color: hotpink;
+}
+
+/* Selector de Pseudo-clase de Posición: ¿Cómo seleccionarías el tercer <article> dentro de la sección de artículos? */
+.content-section article:last-child {
+    border: 10px dotted;
+}
+
+/* Selector de Atributo que Contiene una Palabra: ¿Cómo seleccionarías todos los elementos <h4> que tienen una clase que contiene la palabra title? */
+body h4[class*="title"] {
+    border: 3px dashed #963;
+}

@@ -1,0 +1,58 @@
+/* SELECTOR UNIVERSAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* SELECTOR DE ETIQUETA*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* SELECTOR DE ID */
+#pie {
+    text-align: center;
+    color: white;
+}
+
+/* SELECTOR DE CLASE */
+.texto {
+    color: darkblue;
+}
+
+/* SELECTOR DESCENDENTE */
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* SELECTOR DE PSEUDOCLASE */
+a:hover {
+    color: red;
+}
+
+/* SELECTOR DE HIJO DIRECTO */
+main > aside {
+    background-color: #eee;
+    padding: 10px;
+}
+
+/* DISEÑO FLEXIBLE */
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* HEADER Y FOOTER */
+header {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+footer {
+    background-color: gray;
+    padding: 10px;
+}
