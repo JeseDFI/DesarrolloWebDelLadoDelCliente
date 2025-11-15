@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    margin: auto;
+    background: linear-gradient(to bottom,#baf, #bdfa);
+    max-width: 360px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #eee;
+    background-color: #4443;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 2px 2px #0005;
+}
+
+#compra {
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #6663;
+    outline: none;
+}
+
+#compra:hover {
+    box-shadow: 0 1px 2px #0008;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px #0005;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#agregarCompra {
+    background-color: #28a745;
+    color: white;
+}
+
+#reset {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.04);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#listaCompra {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-top: 24px;
+}
+
+li {
+    background-color: #fff;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px #0005;
+    transition: all 0.1s;
+    word-wrap: break-word;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
